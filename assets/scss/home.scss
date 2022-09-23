@@ -1,0 +1,57 @@
+header {
+    position: fixed; // congelado na tela
+    top: 0;
+    z-index: 100; // vai ficar na frente de 100 tags do mesmo nivel
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    
+    // usando o sass
+    & > nav {
+        width: 70%;
+        > ul {
+            margin: 0;
+            display: flex;
+            li {
+                list-style: none;
+                margin-right: 20px;
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #222;
+                    font-family: 'Open Sans';
+                }
+            }
+        }
+    }
+}
+
+section.full-banner {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/c6bank/hero-bg-xs-tablet.webp);
+    background-size: cover;
+}
+button {
+    width: 290px;
+    line-height: 40px;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+}
+
+@media(min-width: 768px) {
+    section.full-banner {
+        background: url('../images/c6bank/hero-bg-xs-tablet.webp');
+        background-size: cover;
+    }
+}
+@media(min-width: 1280px) {
+    section.full-banner {
+        background: url('../images/c6bank/hero-bg-desktop.webp');
+        background-size: cover;
+    }
+}
