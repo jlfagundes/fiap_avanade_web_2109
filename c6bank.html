@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header>
+    <header class="top-site">
         <div>
             <img src="./assets/images/c6bank/c6bank-logo.png"
             alt="logotipo do c6 bank"
@@ -23,7 +23,7 @@
                 <li><a href="#"></a>Tire suas dúvidas</li>
             </ul>
         </nav>
-        <button>Abra sua Conta</button>
+        <button class="top-button">Abra sua Conta</button>
     </header>
     <section class="full-banner">
         <div class="destak">
@@ -38,5 +38,17 @@
     <footer>
 
     </footer>
+    <script>
+        const header = document.querySelector('.top-site');
+        const topButton = document.querySelector(`.top-button`);
+        header.style.background = 'none';
+        topButton.classList.add('disabled');
+
+        // adicionando um evento
+        window.addEventListener('scroll', (e)  => {
+            window.scrollY <= 100 ? header.style.background = 'none' : header.style.background = '#fff';
+            window.scrollY <= 100 ? topButton.classList.add('disabled') : topButton.classList.remove('disabled');
+        })
+    </script>
 </body>
 </html>
