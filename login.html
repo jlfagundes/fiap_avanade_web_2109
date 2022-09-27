@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco com conta Digital, Cartão sem tarifa | C6 Bank</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="top-site">
+        <div>
+            <img src="./assets/images/c6bank/c6bank-logo.png"
+            alt="logotipo do c6 bank"
+            width="100px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Pessoa Física</a></li>
+                <li><a href="#">Pessoa Jurídica</a></li>
+                <li><a href="#"></a>C6 MEI</li>
+                <li><a href="#"></a>Blog</li>
+                <li><a href="#"></a>Tire suas dúvidas</li>
+            </ul>
+        </nav>
+        <button class="top-button">Abra sua Conta</button>
+    </header>
+    <section class="full-banner-form">
+        <div class="container-login">
+            <form class="form-login">
+                <label for="login">
+                    CPF*:
+                    <input type="text" name="login" id="login" placeholder="Digite CPF"/>
+                </label>
+                <label for="password">
+                    Senha*:
+                    <input type="password" name="password" id="password" placeholder="Digite a senha"/>
+                </label>
+                <button type="submit">Continuar</button>
+                <p><a href="#">esqueci minha senha</a></p>
+                <p><a href="#">Ainda não sou cliente</a></p>
+            </form>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        const header = document.querySelector('.top-site');
+        const topButton = document.querySelector(`.top-button`);
+        header.style.background = 'none';
+        topButton.classList.add('disabled');
+
+        // adicionando um evento
+        window.addEventListener('scroll', (e)  => {
+            window.scrollY <= 100 ? header.style.background = 'none' : header.style.background = '#fff';
+            window.scrollY <= 100 ? topButton.classList.add('disabled') : topButton.classList.remove('disabled');
+        })
+    </script>
+</body>
+</html>
