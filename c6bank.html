@@ -41,14 +41,22 @@
     <script>
         const header = document.querySelector('.top-site');
         const topButton = document.querySelector(`.top-button`);
+        const body = document.querySelector('body');
         header.style.background = 'none';
         topButton.classList.add('disabled');
-
+        console.log(body.clientHeight);
+        
         // adicionando um evento
         window.addEventListener('scroll', (e)  => {
             window.scrollY <= 100 ? header.style.background = 'none' : header.style.background = '#fff';
             window.scrollY <= 100 ? topButton.classList.add('disabled') : topButton.classList.remove('disabled');
+            window.scrollY <= 1000 ? header.style.background = 'none' : header.style.background = 'black';
+            window.scrollY <= 1000 ? header.classList.remove('text-header') : header.classList.add('text-header');
+
         })
+
+        // Ao chegar no footer mudar o header
+        // if (body.clientHeight)
     </script>
 </body>
 </html>

@@ -30,6 +30,24 @@ header {
     }
 }
 
+header.text-header {
+    & div {
+        > img {
+            filter: invert(100%);
+        }
+    }
+    & nav {
+        > ul {
+            > li {
+                > a {
+                    filter: invert(100%);
+                }
+            } 
+        } 
+    }
+
+}
+
 section.full-banner {
     width: 100%;
     height: 100vh;
@@ -63,6 +81,7 @@ section.full-banner {
         }
     }
 }
+
 
 ::selection {
     background: #ffe45c;
