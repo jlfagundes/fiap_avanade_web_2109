@@ -27,14 +27,18 @@
     </header>
     <section class="full-banner-form">
         <div class="container-login">
-            <form class="form-login">
+            <form class="form-login" method="post">
                 <label for="login">
                     CPF*:
-                    <input type="text" name="login" id="login" placeholder="Digite CPF"/>
+                    <input type="text" name="login" id="login" placeholder="Digite CPF" required oninvalid="this.setCustomValidity('Digite aqui seu CPF')"
+                    oninput="this.setCustomValidity('')"/>
                 </label>
                 <label for="password">
                     Senha*:
-                    <input type="password" name="password" id="password" placeholder="Digite a senha"/>
+                    <input type="password" name="password" id="password" placeholder="Digite a senha"
+                    required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="A senha deve conter um número, uma letra minúscula, uma letra maiúscula, e 8 caracteres"/>
                 </label>
                 <button type="submit">Continuar</button>
                 <p><a href="#">esqueci minha senha</a></p>
@@ -57,5 +61,6 @@
             window.scrollY <= 100 ? topButton.classList.add('disabled') : topButton.classList.remove('disabled');
         })
     </script>
+    <script src="./assets/js/main.js" type="text/javascript"></script>
 </body>
 </html>
