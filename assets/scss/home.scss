@@ -32,7 +32,7 @@ header {
 
 header.text-header {
     & div {
-        > img {
+        > svg {
             filter: invert(100%);
         }
     }
@@ -94,7 +94,7 @@ button.disabled {
     
 }
 
-button.disabled:hovr{
+button.disabled:hover{
     background: rgba(36,36,36, 0.2);
 }
 
@@ -133,4 +133,12 @@ button:hover {
         background: url('../images/c6bank/hero-bg-desktop.webp');
         background-size: cover;
     }
+}
+
+.jss4 .jss6 {
+    fill: hsla(0,0%,14%,1);
+}
+.jss12 {
+    width: auto;
+    height: 24px;
 }
