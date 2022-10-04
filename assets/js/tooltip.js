@@ -27,7 +27,7 @@ function newTooltip(targetElement, message, e) {
     newDiv.style.left = (e.clientX + largura > body.clientWidth ? e.clientX - largura - 20 : e.clientX + largura) + 'px';
     newDiv.style.display = 'flex';
     console.log(newDiv.style.width);
-    header.appendChild(newDiv);
+    targetElement.appendChild(newDiv);
 }
 
 tooltip.addEventListener('mouseover', (e) => {
@@ -42,7 +42,7 @@ tooltip.addEventListener('mouseover', (e) => {
         document.querySelector('.tooltip').remove();
     }
     
-    newTooltip(tooltip, 'Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass.', e);
+    newTooltip(header, 'Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass.', e);
 
 })
 tooltip.addEventListener('mouseout', () => {
