@@ -36,7 +36,7 @@ tooltip.addEventListener('mouseover', (e) => {
     const getNewDiv = document.querySelector('.tooltip');
     newDiv.style.display = 'flex';
     newDiv.style.width = largura + 'px'
-    newDiv.style.left = (e.clientX + largura > body.clientWidth ? e.clientX - largura : e.clientX + largura) + 'px';
+    newDiv.style.left = (e.clientX + largura > body.clientWidth ? e.clientX - largura - 20 : e.clientX + largura) + 'px';
     console.log(newDiv.style.width);
     header.appendChild(newDiv);
 })
