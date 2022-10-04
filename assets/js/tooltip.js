@@ -16,7 +16,7 @@ body.addEventListener('mouseout', () => {
 })
 */
 
-const newTooltip = function (targetElement, message, e) {
+function newTooltip(targetElement, message, e) {
     const newDiv = document.createElement('div');
     const largura = 200;
     newDiv.classList.add('tooltip');
