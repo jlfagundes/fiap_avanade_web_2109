@@ -43,10 +43,10 @@ const procuraCeltics = (nomeTime) => {
     return nomeTime == "celtics" || nomeTime == "bucks";
 }
 
-const celticsMap = nbaTeams.map(procuraCeltics);
-const celticsFilter = nbaTeams.filter(procuraCeltics);
-const celticsFind = nbaTeams.find(procuraCeltics);
+const celticsMap = nbaTeams.map(procuraCeltics); // passa por todas as posições e retorna um novo array
+const celticsFilter = nbaTeams.filter(procuraCeltics); // percorre todo o array e retorna todos encontrados
+const celticsFind = nbaTeams.find(procuraCeltics); // Retorna o primeiro encontrado e não continua
 
-console.log('variavel celticsMap -> ', celticsMap);
+console.log('variavel celticsMap -> ', celticsMap); 
 console.log('variavel celticsFilter -> ', celticsFilter);
 console.log('variavel celticsFind -> ', celticsFind);
