@@ -1,6 +1,14 @@
 // trabalhando com fetch
 const cep = document.querySelector('#cep');
 
+const showData = (result) => {
+    for (const campo in result) {
+        if (document.querySelector('#' + campo)) {
+            document.querySelector('#' + campo).value = result[campo];
+        }
+    }
+}
+
 cep.addEventListener('blur', async (e) => {
     let search = cep.value.replace('-', ''); // procura o '-' e substitui por vazio
     console.log(search);
@@ -29,7 +37,14 @@ cep.addEventListener('blur', async (e) => {
         */
         
         // usando o async/await
-        const resultado = await fetch(`https://viacep.com.br/ws/${search}/json/`, options);
-        const json = await resultado.json();
-        console.log('resultado em json', json);
+        try {
+            const resultado = await fetch(`https://viacep.com.br/ws/${search}/json/`, options);
+            const json = await resultado.json();
+            console.log('resultado em json', json);
+            showData(json);
+
+
+        } catch(err) {
+            console.log('erro => ', err.message);
+        }
 })
