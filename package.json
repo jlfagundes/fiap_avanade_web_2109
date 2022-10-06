@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jlfagundes/fiap_avanade_web_2109/issues"
   },
-  "homepage": "https://github.com/jlfagundes/fiap_avanade_web_2109#readme"
+  "homepage": "https://github.com/jlfagundes/fiap_avanade_web_2109#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
 }
