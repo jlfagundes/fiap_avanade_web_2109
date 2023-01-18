@@ -40,3 +40,27 @@ const randomPhrases = function (target, arrText, time) {
     }, time);
 };
 
+
+// prova questão 1
+const fruits = ["Apple", "Banana", "Kiwi"];
+// let x = fruits.shift(1, 2);
+// console.log('fuits apos x', fruits);
+
+let y = fruits.splice(1, 2, "carlos");
+console.log('fuits apos y', fruits);
+
+console.log('y', y)
+console.log('x', x)
+
+
+// prova questao 5
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value, index) {
+  txt += value + "<br>";
+}
+console.log('txt', txt);
+
+setTimeout()

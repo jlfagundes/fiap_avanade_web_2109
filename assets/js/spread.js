@@ -40,9 +40,50 @@ const body = document.querySelector('body');
 body.style.width = '100%';
 body.style.height = '100vh';
 
-body.addEventListener('mouseover', (event) => {
-    body.style.background = '#d4d4d4'
+// body.addEventListener('mouseover', (event) => {
+body.addEventListener('click', (event) => {
+body.style.background = '#d4d4d4'
     console.log('executou o evento')
 });
 
 console.log('teste')
+
+// setTimeout(() => {
+//     // alert("Teste de alerta e piscar barra de tarefa")
+//     window.focus;
+// }, 5000);
+
+// function pisca(){
+// 	if(window.focus()) window.blur();
+// 	else window.focus();
+// }
+// setInterval(pisca, 500);
+
+// teste de piscar a o navegador na barra de tarefas
+// var oldTitle = document.title;
+// var msg = "New Popup!";
+// var timeoutId = false;
+
+// var blink = function() {
+//     document.title = document.title == msg ? oldTitle : msg;//Modify Title in case a popup
+
+//     if(document.hasFocus())//Stop blinking and restore the Application Title
+//     {
+//         document.title = oldTitle;
+//         clearInterval(timeoutId);
+//     }                       
+// };
+
+// if (!timeoutId) {
+//     timeoutId = setInterval(blink, 500);//Initiate the Blink Call
+// };//Blink logic 
+
+
+// usando materialize biblioteca
+function testeAlerta() {
+    var toastHTML = '<span>I am toast content</span><button class="btn-flat toast-action">Undo</button>';
+    M.toast({html: toastHTML});
+  
+}
+
+// setInterval(testeAlerta, 5000)
